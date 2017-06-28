@@ -1,7 +1,8 @@
-# redis总结
-
-标签（空格分隔）： redis
-
+---
+layout: post
+title:  "Redis总结"
+date:   2017-06-28 17:05:13 +0000
+categories: redis
 ---
 
 ##NoSQL简介
