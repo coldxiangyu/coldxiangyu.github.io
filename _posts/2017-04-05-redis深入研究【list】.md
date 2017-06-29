@@ -47,7 +47,8 @@ rpop nums
 
 关于redis的C实现我偷了个懒，网上扒了个图下来：
 
-![此处输入图片的描述][1]
+![此处输入图片的描述][1]  
+
   [1]: http://static.zybuluo.com/coldxiangyu/qtjljd9sjlhimjuhwz2dovhl/image_1bjpfhju4jn112qspd82nl1jpt9.png
 
 > * ***listNode***  　很明显这是一个node节点，可以看出它有一个prev指针和一个next指针，分别指向节点的前驱和后继，然后还有一个void* 这个类型的value
