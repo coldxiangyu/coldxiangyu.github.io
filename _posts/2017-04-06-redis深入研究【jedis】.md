@@ -45,11 +45,13 @@ public class JedisTest {
     
 }
 ```
-结果如下：
+结果如下：  
+
 ![image_1bcumu7tef9ui7lq0uir41mcsm.png-10.4kB][2]
 
 
-对应服务器响应：
+对应服务器响应：  
+
 ![image_1bcun0pbed3ck9890ajl014l913.png-8.1kB][3]
 
 
@@ -104,7 +106,8 @@ public class RedisUtils {
     	
     }
 ```
-执行结果：
+执行结果：  
+
 ![微信截图_20170406091758.png-9.4kB][4]
 
 关于jedis的基本操作先介绍到这里，后续在项目中的具体应用及优化再进行补充说明。
