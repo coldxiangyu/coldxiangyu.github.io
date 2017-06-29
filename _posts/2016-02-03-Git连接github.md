@@ -1,7 +1,10 @@
-# Git连接github
-
-标签（空格分隔）： 技术储备
-
+---
+layout: post
+title:  "Git连接github"
+date:   2016-02-03 15:26:12
+categories: 技术储备
+tags: git github
+mathjax: true
 ---
 
 首先安装git，windows版本下载地址：http://msysgit.github.io/

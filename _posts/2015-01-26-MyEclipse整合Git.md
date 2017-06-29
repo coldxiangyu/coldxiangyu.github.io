@@ -1,7 +1,10 @@
-# MyEclipse整合Git
-
-标签（空格分隔）： 技术储备
-
+---
+layout: post
+title:  "MyEclipse整合Git"
+date:   2015-01-26 12:25:34
+categories: 技术储备
+tags: git myeclipse
+mathjax: true
 ---
 
 ###一、准备工作：
