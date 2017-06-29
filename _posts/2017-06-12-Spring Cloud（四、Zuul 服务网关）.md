@@ -2,6 +2,7 @@
 layout: post
 title:  "Spring Cloud（四、Zuul 服务网关）"
 date:   2017-06-12 19:36:12
+author: coldxiangyu
 categories: WEB
 tags: spring-cloud Zuul
 mathjax: true
@@ -12,6 +13,10 @@ mathjax: true
 
 前面我们已经介绍了使用Spring Cloud Netflix中的Eureka注册中心进行服务注册与发现，服务间通过Ribbon，Feign进服务消费以及负载均衡，Hystrix断路器，Spring Cloud Config进行统一配置管理。  
 在实际应用过程中，我们内部微服务往往是不对外暴露的，需要提供专门的对外服务。这时候难以做到已有服务的复用，也没有一个统一的访问权限控制，因此整个服务需要一个大门，也就是我们这篇文章要讲的服务网关`Zuul`。  
+
+
+
+
 `Zuul`是整个微服务架构重要的组成部分，它负责对外提供统一的REST API，可以对路由策略进行调整，实现负载均衡，还具备权限控制等功能。将一些复杂的非业务逻辑前移，使得服务集群本身具备高可用。  
 看完这些，你会不会把Zuul联系到Nginx？实际上，`Zuul`就是Netflix版的`Nginx`，不过实现方式不同。而`Zuul`本身是基于Servlet的过滤器的集合，再加上与Spring boot整合之后，处理请求的速度可能没有nginx这种简单设计的来得快，但确实可以作为一款不错的nginx替代品。  
 下面我们来看一下`Zuul`的基本用法：  
