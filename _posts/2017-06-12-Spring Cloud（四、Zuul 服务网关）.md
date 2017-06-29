@@ -7,13 +7,16 @@ tags: spring-cloud Zuul
 mathjax: true
 ---
 
-前面我们已经介绍了使用Spring Cloud Netflix中的Eureka注册中心进行服务注册与发现，服务间通过Ribbon，Feign进服务消费以及负载均衡，Hystrix断路器，Spring Cloud Config进行统一配置管理。
-在实际应用过程中，我们内部微服务往往是不对外暴露的，需要提供专门的对外服务。这时候难以做到已有服务的复用，也没有一个统一的访问权限控制，因此整个服务需要一个大门，也就是我们这篇文章要讲的服务网关`Zuul`。
-`Zuul`是整个微服务架构重要的组成部分，它负责对外提供统一的REST API，可以对路由策略进行调整，实现负载均衡，还具备权限控制等功能。将一些复杂的非业务逻辑前移，使得服务集群本身具备高可用。
-看完这些，你会不会把Zuul联系到Nginx？实际上，`Zuul`就是Netflix版的`Nginx`，不过实现方式不同。而`Zuul`本身是基于Servlet的过滤器的集合，再加上与Spring boot整合之后，处理请求的速度可能没有nginx这种简单设计的来得快，但确实可以作为一款不错的nginx替代品。
-下面我们来看一下`Zuul`的基本用法：
+* content
+{:toc}
+
+前面我们已经介绍了使用Spring Cloud Netflix中的Eureka注册中心进行服务注册与发现，服务间通过Ribbon，Feign进服务消费以及负载均衡，Hystrix断路器，Spring Cloud Config进行统一配置管理。  
+在实际应用过程中，我们内部微服务往往是不对外暴露的，需要提供专门的对外服务。这时候难以做到已有服务的复用，也没有一个统一的访问权限控制，因此整个服务需要一个大门，也就是我们这篇文章要讲的服务网关`Zuul`。  
+`Zuul`是整个微服务架构重要的组成部分，它负责对外提供统一的REST API，可以对路由策略进行调整，实现负载均衡，还具备权限控制等功能。将一些复杂的非业务逻辑前移，使得服务集群本身具备高可用。  
+看完这些，你会不会把Zuul联系到Nginx？实际上，`Zuul`就是Netflix版的`Nginx`，不过实现方式不同。而`Zuul`本身是基于Servlet的过滤器的集合，再加上与Spring boot整合之后，处理请求的速度可能没有nginx这种简单设计的来得快，但确实可以作为一款不错的nginx替代品。  
+下面我们来看一下`Zuul`的基本用法：  
 新建模块zuul-gateway，pom配置如下：
-```
+```xml
 <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
@@ -53,7 +56,7 @@ mathjax: true
   </dependencyManagement>
 ```
 应用主类使用`@EnableZuulProxy`注解开启Zuul:
-```
+```java
 @EnableZuulProxy
 @SpringCloudApplication
 public class Application {
@@ -101,10 +104,10 @@ service-A后台输出：
 service-B后台输出：
 ![image_1bigb011k6m91ango7bn3fb2s1g.png-50.7kB][5]
 
-除此之外，Zuul还有着强大的过滤功能，比如外部访问安全控制。
-我们来实现一个Zuul过滤功能，外部必须通过有效的accessToken才能进行服务调用：
+除此之外，Zuul还有着强大的过滤功能，比如外部访问安全控制。  
+我们来实现一个Zuul过滤功能，外部必须通过有效的accessToken才能进行服务调用：  
 首先要继承ZuulFilter，并重写它的四个抽象方法。
-```
+```java
 public class AccessFilter extends ZuulFilter  {
     private static Logger log = LoggerFactory.getLogger(AccessFilter.class);
     @Override
@@ -148,7 +151,7 @@ public class AccessFilter extends ZuulFilter  {
 `run`：过滤器的具体逻辑。需要注意，这里我们通过`ctx.setSendZuulResponse(false)`令zuul过滤该请求，不对其进行路由，然后通过`ctx.setResponseStatusCode(401)`设置了其返回的错误码，当然我们也可以进一步优化我们的返回，比如，通过`ctx.setResponseBody(body)`对返回body内容进行编辑等。
 
 之后我们需要在启动类中添加`@bean`，对定义的过滤器进行实例化。
-```
+```java
 @EnableZuulProxy
 @SpringCloudApplication
 public class Application {
