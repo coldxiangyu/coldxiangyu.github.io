@@ -1,7 +1,10 @@
-# Spring boot相关研究
-
-标签（空格分隔）： WEB框架
-
+---
+layout: post
+title:  "Spring boot相关研究"
+date:   2016-05-15 13:52:12
+categories: WEB
+tags: spring-boot
+mathjax: true
 ---
 ###前言
 熟悉Spring完整生态的人应该都听说过spring boot，没有关心过它的也没关系，我们现在来认识一下它。

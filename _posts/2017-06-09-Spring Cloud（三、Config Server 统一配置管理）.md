@@ -1,7 +1,10 @@
-# Spring Cloud（三、Config Server 统一配置管理）
-
-标签（空格分隔）：WEB框架
-
+---
+layout: post
+title:  "Spring Cloud（三、Config Server 统一配置管理）"
+date:   2017-06-09 11:21:19
+categories: WEB
+tags: spring-cloud
+mathjax: true
 ---
 
 微服务架构一般由单一服务进行细粒度拆分，使得微服务数量众多，而且每个服务都要单独配置，所以一套集中式的、动态配置管理必不可少。Spring Cloud提供了Config Server，功能如下：

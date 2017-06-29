@@ -1,7 +1,10 @@
-# Spring Cloud（二、断路器Hystrix）
-
-标签（空格分隔）： WEB框架
-
+---
+layout: post
+title:  "Spring Cloud（二、断路器Hystrix）"
+date:   2017-06-05 11:31:41
+categories: WEB
+tags: spring-cloud Hystrix
+mathjax: true
 ---
 
 我们在上一篇文章介绍了Spring Cloud的服务注册、消费以及负载均衡。这篇讲一下`Netfilx Hystrix`，断路器。

@@ -1,7 +1,10 @@
-# IntelliJ IDEA 快速创建Spring boot
-
-标签（空格分隔）： 技术储备
-
+---
+layout: post
+title:  "IntelliJ IDEA 快速创建Spring boot"
+date:   2016-05-26 09:59:44
+categories: 技术储备
+tags: IDEA spring-boot
+mathjax: true
 ---
 
 在我的[另一篇文章](https://www.zybuluo.com/coldxiangyu/note/770749)里，已经介绍过Spring boot，以及它的基本配置了。

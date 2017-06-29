@@ -1,7 +1,10 @@
-# redis深入研究【list】
-
-标签（空格分隔）： redis
-
+---
+layout: post
+title:  "redis深入研究【list】"
+date:   2016-04-05 15:29:41
+categories: redis
+tags: redis
+mathjax: true
 ---
 
 redis命令参考手册：http://doc.redisfans.com/

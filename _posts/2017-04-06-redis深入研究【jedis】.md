@@ -1,7 +1,10 @@
-# redis深入研究【jedis】
-
-标签（空格分隔）： redis
-
+---
+layout: post
+title:  "redis深入研究【jedis】"
+date:   2016-04-06 13:47:53
+categories: redis
+tags: redis jedis
+mathjax: true
 ---
 
 Jedis是Redis官方首选的Java客户端开发包，有了它我们就可以愉快的用java操作redis了。

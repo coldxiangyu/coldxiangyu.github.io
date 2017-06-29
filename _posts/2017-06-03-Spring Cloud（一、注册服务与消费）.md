@@ -1,7 +1,10 @@
-# Spring Cloud（一、注册服务与消费）
-
-标签（空格分隔）： WEB框架
-
+---
+layout: post
+title:  "Spring Cloud（一、注册服务与消费）"
+date:   2017-06-03 10:44:12
+categories: WEB
+tags: spring-cloud ribbon feign
+mathjax: true
 ---
 
 ###前言

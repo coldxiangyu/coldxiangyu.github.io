@@ -1,7 +1,10 @@
-# 对协议适配的探索（Spring boot）
-
-标签（空格分隔）： WEB框架
-
+---
+layout: post
+title:  "对协议适配的探索（Spring boot）"
+date:   2017-03-26 16:59:12
+categories: WEB框架
+tags: spring-boot protocol webservice socket
+mathjax: true
 ---
 
 前两天，领导下达指示，探索协议适配的可行性。

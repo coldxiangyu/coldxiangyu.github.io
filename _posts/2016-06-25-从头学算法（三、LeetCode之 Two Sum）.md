@@ -1,7 +1,10 @@
-# 从头学算法（三、LeetCode之 Two Sum）
-
-标签（空格分隔）： 数据结构及算法
-
+---
+layout: post
+title:  "从头学算法（三、LeetCode之 Two Sum）"
+date:   2016-06-25 10:13:22
+categories: 数据结构及算法
+tags: algorithm
+mathjax: true
 ---
 
 刚刚注册完LeetCode，打算找个软柿子捏一下，然后在Algorithms目录下看到排在第一位的是一个Two Sum的例子。那就拿它开刀吧。

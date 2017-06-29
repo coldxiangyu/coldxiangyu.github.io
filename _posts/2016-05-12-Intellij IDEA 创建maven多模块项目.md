@@ -1,7 +1,10 @@
-# Intellij IDEA 创建maven多模块项目
-
-标签（空格分隔）： 技术储备
-
+---
+layout: post
+title:  "Intellij IDEA 创建maven多模块项目"
+date:   2016-05-12 14:16:12
+categories: 技术储备
+tags: IDEA maven
+mathjax: true
 ---
 
 在研究微服务项目的过程中，对项目结构有了新的认识。也是由Maven引入了模块（Module）的概念。

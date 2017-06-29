@@ -1,7 +1,10 @@
-# IntelliJ IDEA右键无法创建包以及class解决办法
-
-标签（空格分隔）： 技术储备
-
+---
+layout: post
+title:  "IntelliJ IDEA右键无法创建包以及class解决办法"
+date:   2016-05-13 10:16:32
+categories: 技术储备
+tags: IDEA
+mathjax: true
 ---
 
 在使用IDEA的过程中，由IDEA转移Myeclipse的代沟一直存在。

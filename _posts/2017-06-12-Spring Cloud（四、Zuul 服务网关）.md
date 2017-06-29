@@ -1,7 +1,10 @@
-# Spring Cloud（四、Zuul 服务网关）
-
-标签（空格分隔）： WEB框架
-
+---
+layout: post
+title:  "Spring Cloud（四、Zuul 服务网关）"
+date:   2017-06-12 19:36:12
+categories: WEB
+tags: spring-cloud Zuul
+mathjax: true
 ---
 
 前面我们已经介绍了使用Spring Cloud Netflix中的Eureka注册中心进行服务注册与发现，服务间通过Ribbon，Feign进服务消费以及负载均衡，Hystrix断路器，Spring Cloud Config进行统一配置管理。

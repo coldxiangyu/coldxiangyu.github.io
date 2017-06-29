@@ -1,8 +1,12 @@
-# My vim _vimrc
-
-标签（空格分隔）： Vim
-
 ---
+layout: post
+title:  "My vim _vimrc"
+date:   2016-06-30 13:26:12
+categories: Vim
+tags: Vim
+mathjax: true
+---
+
 个人`vim`配置，持续更新。
 ```
 source $VIMRUNTIME/vimrc_example.vim

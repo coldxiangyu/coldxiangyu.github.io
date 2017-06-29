@@ -1,8 +1,10 @@
 ---
 layout: post
 title:  "Redis总结"
-date:   2017-06-28 17:05:13 +0000
+date:   2017-06-14 17:05:13
 categories: redis
+tags: redis
+mathjax: true
 ---
 
 ##NoSQL简介
