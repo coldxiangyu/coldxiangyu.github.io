@@ -7,11 +7,11 @@ tags: IDEA spring-boot
 mathjax: true
 ---
 
-在我的[另一篇文章](https://www.zybuluo.com/coldxiangyu/note/770749)里，已经介绍过Spring boot，以及它的基本配置了。
-那篇文章是在Myeclipse环境通过maven项目搭建起来的，虽然也很容易，但是还有更容易的。今天我要介绍的就是通过IDEA的Spring Initializr创建Spring boot工程。
-接下来来看看到底有多容易。
+在我的[另一篇文章](https://www.zybuluo.com/coldxiangyu/note/770749)里，已经介绍过Spring boot，以及它的基本配置了。  
+那篇文章是在Myeclipse环境通过maven项目搭建起来的，虽然也很容易，但是还有更容易的。今天我要介绍的就是通过IDEA的Spring Initializr创建Spring boot工程。  
+接下来来看看到底有多容易。  
 在不用IntelliJ IDEA的情况下，我们通常需要访问http://start.spring.io/，生成maven包，然后解压导入到我们的IDE。
-![image_1bhu45e0gqkc125014gfi3m13n39.png-47.6kB][1]
+![image_1bhu45e0gqkc125014gfi3m13n39.png-47.6kB][1]  
 而IntelliJ IDEA与Spring结合的非常好，Spring Initializr已经内置，我们直接在IDEA进行创建即可。
 ![image_1bhu253ei1ueo1ib0kj9177i1u8lp.png-48kB][2]
 
@@ -37,14 +37,14 @@ mathjax: true
 ![image_1bhu2u63q1jmt1m6d1dbc1vjqb632d.png-92.3kB][6]
 
 自动生成的POM已经非常全面了，不过少了一个`spring-boot-starter-web`，我们添加web依赖即可。
-```
+```xml
 <dependency>
 	<groupId>org.springframework.boot</groupId>
 	<artifactId>spring-boot-starter-web</artifactId>
 </dependency>
 ```
 我们改造入口类，实现一个hello world！
-```
+```java
 package com.example.demo;
 
 import org.springframework.boot.SpringApplication;
@@ -72,7 +72,7 @@ public class DemoApplication {
 成功！
 
 此外，我们也可以通过生成的单元测试类进行模拟http请求：
-```
+```java
 package com.example.demo;
 
 import org.junit.Before;
