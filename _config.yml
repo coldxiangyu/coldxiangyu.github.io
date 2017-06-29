@@ -19,11 +19,11 @@ description: > # this means to ignore newlines until "baseurl:"
   coldxiangyu is always the best!
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://coldxiangyu.sit" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+twitter_username: coldxiangyu
+github_username:  coldxiangyu
 
 # Build settings
-markdown: kramdown
+markdown: redcarpet
 theme: minima
 gems:
   - jekyll-feed
