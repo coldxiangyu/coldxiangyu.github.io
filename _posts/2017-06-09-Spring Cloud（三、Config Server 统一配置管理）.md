@@ -20,6 +20,9 @@ mathjax: true
 
 - 将配置信息以HTTP REST接口的形式暴露 
 
+
+
+
 Config Server的架构图如下： 
 ![image_1bi5apavisro1ihb1lc7c716uo9.png-129.7kB][1]
 工作流程如下：
