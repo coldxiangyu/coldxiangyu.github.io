@@ -7,14 +7,14 @@ tags: IDEA maven
 mathjax: true
 ---
 
-在研究微服务项目的过程中，对项目结构有了新的认识。也是由Maven引入了模块（Module）的概念。
+在研究微服务项目的过程中，对项目结构有了新的认识。也是由Maven引入了模块（Module）的概念。  
 首先了解一下Maven多模块的概念，就是在一个项目下可以有多个模块。
 
 - `Parent Project`用户组织不同的Module，不实现逻辑。
 - `Parent project`和各个`Module`拥有独立pom文件。
 - `Module`集成`Parent project`的`groupId`和`version`，`Module`只需要指定自己的`artifactId`即可。
 - idea的project的模块都是配置在`project_dir/.idea/modules.xml`中的，新建的项目本身默认是这个项目的第一个模块。模块本身是没有层级的。在项目结构中可以配置模块间的依赖关系。
-
+  
 下面我们来展示一个多模块的项目的创建过程。
 
 1.创建Maven项目，用于组织Module。
@@ -49,12 +49,12 @@ mathjax: true
 
 ![image_1bhtl147818ooadgdjuc0arqa9.png-46.1kB][10]
 
-然后下面就是由service1调用刚刚编写的方法了。
-service1怎么省事我们怎么来，我不想部署tomcat，直接用spring boot。在service1中直接添加spring boot的依赖？
+然后下面就是由service1调用刚刚编写的方法了。  
+service1怎么省事我们怎么来，我不想部署tomcat，直接用spring boot。在service1中直接添加spring boot的依赖？  
 NONONO，我们看一下service1的pom就会发现，service1只是一个子模块，整体的pom是在muti-modules下的。OK，那我们得在muti-modules下pom中添加公共spring boot依赖：
 
 ![image_1bhtlcl95bm5bjjt271ctmokum.png-76.1kB][11]
-这时候你有没有意识到pom这个parent节点的意义，我们创建子模块的时候，parent节点依赖于我们创建的父项目，而我们在介绍spring boot的时候，也是通过parent引入的，你肯定懂了这两种的关系。
+这时候你有没有意识到pom这个parent节点的意义，我们创建子模块的时候，parent节点依赖于我们创建的父项目，而我们在介绍spring boot的时候，也是通过parent引入的，你肯定懂了这两种的关系。  
 而我们现在只需要在service1中启动spring boot，service2只提供调用方法，不想在pom整体的引入`spring-boot-starter-web`，这时候我们就可以分别对service1和service2的pom独立配置了，我们只需配置service1，加入`spring-boot-starter-web`的依赖，此外还要加入service2的依赖。
 
 ![image_1bhtlvc6smqr14shret4ft1ng13.png-72.6kB][12]
@@ -68,9 +68,9 @@ NONONO，我们看一下service1的pom就会发现，service1只是一个子模�
 ![image_1bhtm5rejnta1qt814ne1fc610je2a.png-11.8kB][14]
 
 调用成功！
-
+  
 当然，Myeclipse也可以创建Maven多模块，不过IDEA更为方便，这也是我一直推荐IDEA的原因。
-此外，如果项目之间不需要依赖，每个模块都是互相独立的个体的话，Parent Project也可以创建为普通项目，也无需一个总体POM进行整合，大家视情况而定即可。
+此外，如果项目之间不需要依赖，每个模块都是互相独立的个体的话，Parent Project也可以创建为普通项目，也无需一个总体POM进行整合，大家视情况而定即可。  
 本文代码已上传github：https://github.com/coldxiangyu/mutimodules
 
 
