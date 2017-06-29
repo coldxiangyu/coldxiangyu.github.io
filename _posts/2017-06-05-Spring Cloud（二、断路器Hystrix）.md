@@ -7,6 +7,9 @@ tags: spring-cloud Hystrix
 mathjax: true
 ---
 
+* content
+{:toc}
+
 我们在上一篇文章介绍了Spring Cloud的服务注册、消费以及负载均衡。这篇讲一下`Netfilx Hystrix`，断路器。
 
 `Hystrix`是`Netflix`开源的微服务框架套件之一，该框架目标在于通过控制那些访问远程系统、服务和第三方库的节点，从而对延迟和故障提供更强大的容错能力。`Hystrix`具备拥有回退机制和断路器功能的线程和信号隔离，请求缓存和请求打包，以及监控和配置等功能。
@@ -22,14 +25,14 @@ mathjax: true
 ![image_1bi2ntecql5v161f8dchb113t9.png-23.6kB][1]
 
 我们在ribbon中加入`Hystrix`，在pom中增加`hystrix`依赖：
-```
+```xml
 <dependency>
     <groupId>org.springframework.cloud</groupId>
     <artifactId>spring-cloud-starter-hystrix</artifactId>
 </dependency>
 ```
 在`eureka-ribbon`的主类RibbonApplication中使用`@EnableCircuitBreaker`注解开启断路器功能：
-```
+```java
 @SpringBootApplication
 @EnableDiscoveryClient
 @EnableCircuitBreaker
@@ -45,7 +48,7 @@ public class RibbonApplication {
 }
 ```
 改造原来的服务消费方式，新增ComputeService类，在使用ribbon消费服务的函数上增加`@HystrixCommand`注解来指定回调方法。
-```
+```java
 @Service
 public class ComputeService {
     @Autowired
@@ -60,7 +63,7 @@ public class ComputeService {
 }
 ```
 提供rest接口的Controller改为调用ComputeService的addService
-```
+```java
 @RestController
 public class ConsumerController {
     @Autowired
@@ -78,7 +81,7 @@ public class ConsumerController {
 与Ribbon相比，Feign使用Hystrix就方便多了，因为Feign本身是依赖Hystrix的，我们无需修改pom。
 
 我们需要对之前的eureka-feign进行改造，使用@FeignClient注解中的fallback属性指定回调类：
-```
+```java
 @FeignClient(value = "compute-service", fallback = ComputeClientHystrix.class)
 public interface ComputeClient {
     @RequestMapping(method = RequestMethod.GET, value = "/add")
@@ -86,7 +89,7 @@ public interface ComputeClient {
 }
 ```
 创建回调类ComputeClientHystrix，实现@FeignClient的接口，此时实现的方法就是对应@FeignClient接口中映射的fallback函数。
-```
+```java
 @Component
 public class ComputeClientHystrix implements ComputeClient {
     @Override
