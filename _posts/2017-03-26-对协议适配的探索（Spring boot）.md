@@ -7,15 +7,15 @@ tags: spring-boot protocol webservice socket
 mathjax: true
 ---
 
-前两天，领导下达指示，探索协议适配的可行性。
-所谓的协议适配，就是服务层提供的多协议服务，比如webservice（soap）、http接口、FTP、socket（TCP/IP）等，对外无差别暴露统一的IP和端口，而客户端由此统一IP端口接收请求之后进行适配调用不同的服务。
-听上去有那么点意思。
-当然，首先要搭建一个工程试验一下才行。
-试验的话，肯定不能在搭建项目上花费太多时间，spring boot是不二之选。
-源码已上传github：https://github.com/coldxiangyu/protocoladapter
-我们要研究多协议，所以肯定要加入webservice，webservice采用cxf发布。
+前两天，领导下达指示，探索协议适配的可行性。  
+所谓的协议适配，就是服务层提供的多协议服务，比如webservice（soap）、http接口、FTP、socket（TCP/IP）等，对外无差别暴露统一的IP和端口，而客户端由此统一IP端口接收请求之后进行适配调用不同的服务。  
+听上去有那么点意思。  
+当然，首先要搭建一个工程试验一下才行。  
+试验的话，肯定不能在搭建项目上花费太多时间，spring boot是不二之选。  
+源码已上传github：https://github.com/coldxiangyu/protocoladapter  
+我们要研究多协议，所以肯定要加入webservice，webservice采用cxf发布。  
 我们除了引入spring boot的包还要引入cxf的包：
-```
+```xml
 <dependency>
 	<groupId>org.apache.cxf</groupId>
 	<artifactId>cxf-rt-frontend-jaxws</artifactId>
@@ -27,12 +27,12 @@ mathjax: true
 	<version>3.1.6</version>
 </dependency>
 ```
-这时候，开发条件就已经满足了。
+这时候，开发条件就已经满足了。  
 我们来实现一个webservice版的hello，这和之前spring整合cxf通过配置XML是不一样的。
 
 1.定义接口方法：
 
-```
+```java
 package com.lxy.webservice;
 
 import javax.jws.WebMethod;
@@ -48,7 +48,7 @@ public interface HelloService {
 
 2.定义接口实现方法：
 
-```
+```java
 package com.lxy.webservice.impl;
 
 import javax.jws.WebService;
@@ -66,9 +66,9 @@ public class HelloServiceImpl implements HelloService {
 }
 
 ```
-3.这时候我们就可以对我们定义的webservice进行发布了。发布的方式有两种，一种是默认发布，还有一种就是自定义发布。
+3.这时候我们就可以对我们定义的webservice进行发布了。发布的方式有两种，一种是默认发布，还有一种就是自定义发布。  
 我们看看默认发布：
-```
+```java
 package com.lxy.cxf;
 
 import javax.xml.ws.Endpoint;
@@ -113,9 +113,9 @@ public class CxfConfig {
     
 }
 ```
-默认发布实现非常简单，只需定义webservice发布路径，通过`endpoint.publish`发布方法即可。
+默认发布实现非常简单，只需定义webservice发布路径，通过`endpoint.publish`发布方法即可。  
 如果默认的发布不满足我们的需求怎么办呢，比如默认的发布端口是8080，我们想用8081进行发布。也非常简单，我们只需让此类实现EmbeddedServletContainerCustomizer接口，然后通过重写customize方法，进行container的重新设定即可。
-```
+```java
 @SpringBootApplication
 public class Application implements EmbeddedServletContainerCustomizer  {
 
@@ -145,12 +145,12 @@ public class Application implements EmbeddedServletContainerCustomizer  {
         return endpoint;
     }
 ```
-现在我们通过main方法启动，通过我们定义的webservice地址：http://localhost:8080/webservices/hello?wsdl查看是否发布成功。
+现在我们通过main方法启动，通过我们定义的webservice地址：http://localhost:8080/webservices/hello?wsdl 查看是否发布成功。
 ![image_1bhj7qb00dcecveodd3m1nni9.png-70.9kB][1]
-我们可以看到，webservice已经成功发布，通过http://localhost:8080/webservices我们可以查看所有的webservice：
+我们可以看到，webservice已经成功发布，通过 http://localhost:8080/webservices 我们可以查看所有的webservice：
 ![image_1bhj7sghu15l9cq01bnj1b428jb13.png-27.7kB][2]
 我们再编写cxf客户端代码调用一下：
-```
+```java
 package com.lxy.client;
 
 import org.apache.cxf.endpoint.Client;
@@ -167,15 +167,15 @@ public class CxfClient {
 }
 ```
 ![image_1bhj84c88oq639hb2u1i04n2q1g.png-25.6kB][3]
-调用成功！
+调用成功！  
 OK，webservice我们进行到这里。
 
 ---
-接下来要进行socket编程了。
-到这里就引发了我的思考，刚刚发布的webservice已经将8080端口占用了，如果socket继续监听8080肯定会引发端口冲突，我们如何进行统一端口之后无差别的进行协议适配呢？
-感觉不太现实，不过还是先写个socket服务再说。
+接下来要进行socket编程了。  
+到这里就引发了我的思考，刚刚发布的webservice已经将8080端口占用了，如果socket继续监听8080肯定会引发端口冲突，我们如何进行统一端口之后无差别的进行协议适配呢？  
+感觉不太现实，不过还是先写个socket服务再说。  
 首先定义socket server服务端：
-```
+```java
 package com.lxy.socket;
 
 import java.io.BufferedReader;
@@ -215,10 +215,10 @@ public class SocketServer {
 }
 ```
 服务端编写完毕，直接启动。
-![image_1bhj8ag2s1p93n8l1v0f1i3q31h1t.png-25.7kB][4]
-不出所料，端口占用，我们姑且先改成8081，重新启动，启动成功！
+![image_1bhj8ag2s1p93n8l1v0f1i3q31h1t.png-25.7kB][4]  
+不出所料，端口占用，我们姑且先改成8081，重新启动，启动成功！  
 我们继续编写客户端socket：
-```
+```java
 package com.lxy.client;
 
 import java.io.BufferedReader;
@@ -253,14 +253,14 @@ public class SocketClient {
 }
 
 ```
-启动客户端，查看server与client的打印日志：
+启动客户端，查看server与client的打印日志：  
 客户端：
 ![image_1bhj8f76jfqdi8mv6urrv1h7b2n.png-5.8kB][5]
 服务端：
 ![image_1bhj8fmvskee16o6lokktb4ut34.png-5.9kB][6]
 那我们用socket客户端请求一下webservice的8080端口呢？
 ![image_1bhj8ddnb1a318vkslo1i1a1p092a.png-16.8kB][7]
-我们可以看到，webservice不识别此请求，返回400报错。
+我们可以看到，webservice不识别此请求，返回400报错。  
 webservice服务后台也对应报错：
 ![image_1bhj8s553v6d1ih571runnpv63h.png-47.3kB][8]
 
