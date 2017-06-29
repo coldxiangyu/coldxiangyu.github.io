@@ -8,7 +8,8 @@ mathjax: true
 ---
 
 Jedis是Redis官方首选的Java客户端开发包，有了它我们就可以愉快的用java操作redis了。
-接下来搭建一个测试jedis的工程，如下：
+接下来搭建一个测试jedis的工程，如下：  
+
 ![image_1bcumo8b51chl1405s9d5nl1uj89.png-16.8kB][1]
 
 
