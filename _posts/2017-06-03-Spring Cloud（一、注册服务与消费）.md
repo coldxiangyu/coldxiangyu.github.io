@@ -7,15 +7,18 @@ tags: spring-cloud ribbon feign
 mathjax: true
 ---
 
-###前言
+* content
+{:toc}
+
+### 前言
 首先说下研究Spring Cloud的背景。目前我们银保通云核心项目采用的是`dubbo+zookeeper`的形式进行微服务的搭建，但是客户要求使用Spring Cloud替换dubbo，基于此，展开对Spring cloud的研究。
 
-###基本概念
+### 基本概念
 首先Spring Cloud是一个笼统的概念，它是一系列开源项目的统称。
 它利用Spring Boot的开发便利性巧妙地简化了分布式系统基础设施的开发，如服务发现注册、配置中心、消息总线、负载均衡、断路器、数据监控等，都可以用Spring Boot的开发风格做到一键启动和部署。Spring并没有重复制造轮子，它只是将目前各家公司开发的比较成熟、经得起实际考验的服务框架组合起来，通过Spring Boot风格进行再封装屏蔽掉了复杂的配置和实现原理，最终给开发者留出了一套简单易懂、易部署和易维护的分布式系统开发工具包。
 Spring Cloud对比dubbo，两者有什么区别呢？网上有很多相关的文章，一个比较经典的比喻就是：使用Dubbo构建的微服务架构就像组装电脑，各环节我们的选择自由度很高，但是最终结果很有可能因为一条内存质量不行就点不亮了，总是让人不怎么放心，但是如果你是一名高手，那这些都不是问题；而Spring Cloud就像品牌机，在Spring Source的整合下，做了大量的兼容性测试，保证了机器拥有更高的稳定性，但是如果要在使用非原装组件外的东西，就需要对其基础有足够的了解。
 
-###常用组件
+### 常用组件
 
 Spring Cloud下有很多工程：
 
@@ -34,16 +37,16 @@ Spring Cloud下有很多工程：
 
 后续再对这些进行详细研究，我们先来实现基本的功能。
 
-###前提准备：
+### 前提准备：
 
 - 了解spring boot：[Spring boot相关研究](https://www.zybuluo.com/coldxiangyu/note/770749)
 - 一个上手的编辑器，推荐IDEA，原因参考：[IDEA快速创建Spring boot](https://www.zybuluo.com/coldxiangyu/note/776607)
 - [理解多模块](https://www.zybuluo.com/coldxiangyu/note/776236)
 
 
-####1.首先创建服务注册中心
+#### 1.首先创建服务注册中心
 创建项目eureka-server，pom引入spring boot相关依赖：
-```
+```xml
 <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
@@ -74,7 +77,7 @@ Spring Cloud下有很多工程：
   </dependencyManagement>
 ```
 通过`@EnableEurekaServer`注解启动一个服务注册中心提供给其他应用进行对话。
-```
+```java
 @EnableEurekaServer
 @SpringBootApplication
 public class Application {
@@ -97,11 +100,11 @@ eureka.client.serviceUrl.defaultZone=http://localhost:${server.port}/eureka/
 启动注册服务，访问http://localhost:1111，可以看到如下页面：
 ![image_1bi0jhit019f01jmre1a1lnlqlo9.png-32.1kB][1]
 可以看到，目前还没有服务。
-####2.创建服务提供方
+#### 2.创建服务提供方
 下面我们创建提供服务的客户端compute-service，并向服务注册中心注册自己。
 假设我们有一个提供计算功能的微服务模块，我们实现一个RESTful API，通过传入两个参数a和b，最后返回a + b的结果。
 首先，创建一个基本的Spring Boot应用，在pom.xml中，加入如下配置：
-```
+```java
 <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
@@ -132,7 +135,7 @@ eureka.client.serviceUrl.defaultZone=http://localhost:${server.port}/eureka/
   </dependencyManagement>
 ```
 其次，实现`/add`请求处理接口，通过DiscoveryClient对象，在日志中打印出服务实例的相关内容。
-```
+```java
 @RestController
 public class ComputeController {
     private final Logger logger = Logger.getLogger(getClass());
@@ -148,7 +151,7 @@ public class ComputeController {
 }
 ```
 最后在主类中通过加上`@EnableDiscoveryClient`注解，该注解能激活`Eureka`中的DiscoveryClient`实现，才能实现Controller中对服务信息的输出。
-```
+```java
 @EnableDiscoveryClient
 @SpringBootApplication
 public class ComputeServiceApplication {
@@ -187,7 +190,7 @@ eureka.client.serviceUrl.defaultZone=http://localhost:1111/eureka/
 
 接下来我们来实现ribbon调用服务，以及负载均衡：
 创建项目eureka-ribbon，pom配置如下：
-```
+```xml
 <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
@@ -226,7 +229,7 @@ eureka.client.serviceUrl.defaultZone=http://localhost:1111/eureka/
   </dependencyManagement>
 ```
 在应用主类中，通过`@EnableDiscoveryClient`注解来添加发现服务能力。创建`RestTemplate`实例，并通过`@LoadBalanced`注解开启均衡负载能力。
-```
+```java
 @SpringBootApplication
 @EnableDiscoveryClient
 public class RibbonApplication {
@@ -241,7 +244,7 @@ public class RibbonApplication {
 }
 ```
 创建`ConsumerController`来消费`COMPUTE-SERVICE`的add服务。通过直接`RestTemplate`来调用服务，计算10 + 20的值。
-```
+```java
 @RestController
 public class ConsumerController {
     @Autowired
@@ -276,7 +279,7 @@ eureka.client.serviceUrl.defaultZone=http://localhost:1111/eureka/
 `Feign`是一个声明式的`Web Service`客户端，它使得编写`Web Serivce`客户端变得更加简单。我们只需要使用`Feign`来创建一个接口并用注解来配置它既可完成。它具备可插拔的注解支持，包括`Feign`注解和`JAX-RS`注解。`Feign`也支持可插拔的编码器和解码器。`Spring Cloud`为`Feign`增加了对`Spring MVC`注解的支持，还整合了`Ribbon`和`Eureka`来提供均衡负载的HTTP客户端实现。
 
 我们来创建项目eureka-feign，pom配置如下：
-```
+```xml
 <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
@@ -315,7 +318,7 @@ eureka.client.serviceUrl.defaultZone=http://localhost:1111/eureka/
   </dependencyManagement>
 ```
 在应用主类中通过`@EnableFeignClients`注解开启`Feign`功能，具体如下：
-```
+```java
 @SpringBootApplication
 @EnableDiscoveryClient
 @EnableFeignClients
@@ -326,7 +329,7 @@ public class FeignApplication {
 }
 ```
 定义`compute-service`服务的接口，具体如下：
-```
+```java
 @FeignClient("compute-service")
 public interface ComputeClient {
     @RequestMapping(method = RequestMethod.GET, value = "/add")
@@ -337,7 +340,7 @@ public interface ComputeClient {
 通过`Spring MVC`的注解来配置`compute-service`服务下的具体实现。
 
 在web层中调用上面定义的ComputeClient，具体如下：
-```
+```java
 @RestController
 public class ConsumerController {
 
