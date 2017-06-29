@@ -7,6 +7,9 @@ tags: spring-cloud
 mathjax: true
 ---
 
+* content
+{:toc}
+
 微服务架构一般由单一服务进行细粒度拆分，使得微服务数量众多，而且每个服务都要单独配置，所以一套集中式的、动态配置管理必不可少。Spring Cloud提供了Config Server，功能如下：
 
 - 集中化的配置文件管理 
@@ -29,7 +32,7 @@ Config Server的架构图如下：
 
 接下来我们来配置一个Config Server：
 新建config-server模块，pom配置如下：
-```
+```xml
 <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -92,7 +95,7 @@ spring.cloud.config.server.native.searchLocations=file:D:/
 不过还是推荐git的形式进行版本控制。
 
 最后创建Spring Boot的程序主类，并添加@EnableConfigServer注解，开启Config Server
-```
+```java
 @EnableConfigServer
 @SpringBootApplication
 public class Application {
@@ -157,7 +160,7 @@ URL与配置文件的映射关系如下：
 ```
 浏览器可以访问之后，我们来尝试在实际的微服务端是如何在Config Server中心拉取配置的。
 创建config-client模块，pom配置如下：
-```
+```xml
 <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
@@ -212,7 +215,7 @@ server.port=7002
 这里要注意我们配置的是`bootstrap.properties`而不是`application.properties`，因为`bootstrap.properties`会在应用启动之前读取,而`spring.cloud.config.uri`会影响应用启动。
 
 接着创建一个REST api获取配置中心from属性：
-```
+```java
 @RefreshScope
 @RestController
 class TestController {
@@ -228,7 +231,7 @@ class TestController {
 通过`@Value("${from}")`绑定配置服务中配置的from属性。`@RefreshScope`配置，可以使配置通过/refresh刷新之后，加载新的配置。
 
 我们再创建spring boot启动类：
-```
+```java
 @EnableDiscoveryClient
 @SpringBootApplication
 public class Application {
