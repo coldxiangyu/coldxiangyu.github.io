@@ -7,11 +7,11 @@ tags: redis
 mathjax: true
 ---
 
-redis命令参考手册：http://doc.redisfans.com/
-可以看到redis提供的命令有很多，比较吸引人的大概就是redis关于list的应用了，因为可以作为队列使用，也比较适合银保通，还可以省去专门的MQ服务器，比如RabbitMQ、ActiveMQ等。
-查看redis命令手册可以看到，redis关于List提供以下方法：
+redis命令参考手册：http://doc.redisfans.com/  
+可以看到redis提供的命令有很多，比较吸引人的大概就是redis关于list的应用了，因为可以作为队列使用，也比较适合银保通，还可以省去专门的MQ服务器，比如RabbitMQ、ActiveMQ等。  
+查看redis命令手册可以看到，redis关于List提供以下方法：  
 `BLPOP、BRPOP、BRPOPLPUSH、LINDEX、LINSERT、LLEN、LPOP、LPUSH、LPUSHX、`
-`LRANGE、LREM、LSET、LTRIM、RPOP、RPOPLPUSH、RPUSH、RPUSHX`等。
+`LRANGE、LREM、LSET、LTRIM、RPOP、RPOPLPUSH、RPUSH、RPUSHX`等。  
 其中作为队列使用，常用的无非就是`LPUSH、LPOP、RPUSH、RPOP`，单从命名大概可以看出，这个list作为队列可以左PUSH、POP，也可以右PUSH、POP，以下为本地redis客户端测试：
 ```
 127.0.0.1:6379> lpush nums 1 2 3 4 5 6
@@ -48,7 +48,7 @@ rpop nums
 关于redis的C实现我偷了个懒，网上扒了个图下来：
 
 ![此处输入图片的描述][1]
-  [1]: http://images2015.cnblogs.com/blog/214741/201511/214741-20151116214457405-583316699.png
+  [1]: http://static.zybuluo.com/coldxiangyu/qtjljd9sjlhimjuhwz2dovhl/image_1bjpfhju4jn112qspd82nl1jpt9.png
 
 > * ***listNode***  　很明显这是一个node节点，可以看出它有一个prev指针和一个next指针，分别指向节点的前驱和后继，然后还有一个void* 这个类型的value
 
