@@ -7,16 +7,16 @@ tags: git github
 mathjax: true
 ---
 
-首先安装git，windows版本下载地址：http://msysgit.github.io/
-安装过程不再详述。
+首先安装git，windows版本下载地址：http://msysgit.github.io/  
+安装过程不再详述。  
 界面如下，类似shell工具：
-![image_1bh2a7a1p1krm15kt9ghalun0sm.png-9.4kB][1]
-在windows机器上安装完gitbash之后，如何与github进行连接呢？
+![image_1bh2a7a1p1krm15kt9ghalun0sm.png-9.4kB][1]  
+在windows机器上安装完gitbash之后，如何与github进行连接呢？  
 1.创建身份标识（用户名、邮箱）
 ```
 git config --global user.name coldxiangyu #用户名
 git config --global user.email coldxiangyu@qq.com #邮箱
-```
+```  
 2.创建git仓库，我本地选取默认目录创建git文件夹作为仓库
 ```
 coldxiangyu@DESKTOP-7TT78KK MINGW64 ~
@@ -36,7 +36,7 @@ $
 ssh-keygen -t rsa -C "coldxiangyu@qq.com"
 ```
 ![image_1bh2aoftb1b0g10v0o04vg0fja13.png-30.7kB][2]
-
+  
 生成秘钥文件：
 
 ![image_1bh2at3o01mus7gt6nj3ljiik1g.png-20.5kB][3]
@@ -49,7 +49,7 @@ ssh-keygen -t rsa -C "coldxiangyu@qq.com"
 ```
 ssh git@github.com
 ```
-![image_1bh2bsqcmgb61c51jp41mnrea49.png-9.2kB][5]
+![image_1bh2bsqcmgb61c51jp41mnrea49.png-9.2kB][5]  
 OK!这时候就完成了git与github的连接了。
 
 
