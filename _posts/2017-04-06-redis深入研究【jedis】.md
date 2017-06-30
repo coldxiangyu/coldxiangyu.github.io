@@ -13,6 +13,8 @@ Jedis是Redis官方首选的Java客户端开发包，有了它我们就可以愉
 ![image_1bcumo8b51chl1405s9d5nl1uj89.png-16.8kB][1]
 
 
+
+
 需要引入包，jedis-2.9.0.jar以及commons-pool2-2.3.jar
 首先编写Junit测试类，测试redis连通性。
 代码如下：
