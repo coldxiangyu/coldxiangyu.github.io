@@ -11,18 +11,19 @@ type: page
 
 ## 架构设计
 
-[一些设计上的基本常识](http://javatar.iteye.com/blog/706098)(注意在框架设计过程中，将API/SPI进行区分)
+* [一些设计上的基本常识](http://javatar.iteye.com/blog/706098)(注意在框架设计过程中，将API/SPI进行区分)
 
 ## 网络编程
 
-[RPC原来就是Socket——RPC框架到dubbo的服务动态注册，服务路由，负载均衡演化](http://www.cnblogs.com/intsmaze/p/6058765.html)(虽然不是很严谨，但是能体现出整个RPC的思路。缺点：并没有使用动态代理的方式进行处理。)  
-[TCP/IP四层模型](http://www.cnblogs.com/BlueTzar/articles/811160.html)(严肃的TCP/IP讲解)  
-[HTTP协议—— 简单认识TCP/IP协议](http://www.cnblogs.com/roverliang/p/5176456.html)(配图，生动形象，逗比，易懂)  
-[对 TCP/IP 网络协议的深入浅出总结](http://blog.jobbole.com/74795/)(HTTP，TCP/IP，SOAP，SOCKET总结的大成，socket总结不足)  
-[关于RPC协议的通俗理解](http://blog.csdn.net/huangjin0507/article/details/52199349)(总结了知乎同问题下精彩的回答，通俗易懂)  
-[HTTP、TCP、UDP、Socket、servlet区别与联系](http://blog.csdn.net/wabiaozia/article/details/54571874)(说实话，这篇文章并没有什么亮点，而且并没有题目说的那样讲述区别和联系，都是介绍大概的概念完事了，收藏下来只是因为在讲Servlet的部分吸引了我)  
-[RPC框架几行代码就够了](http://javatar.iteye.com/blog/1123915)(dubbo框架作者，不需要多说)  
-[Java Socket编程](http://www.cnblogs.com/wnlja/p/4366402.html)(网络编程，基本上就是socket编程，而socket编程，这一篇就够了)
+* [RPC原来就是Socket——RPC框架到dubbo的服务动态注册，服务路由，负载均衡演化](http://www.cnblogs.com/intsmaze/p/6058765.html)
+    虽然不是很严谨，但是能体现出整个RPC的思路。缺点：并没有使用动态代理的方式进行处理。
+* [TCP/IP四层模型](http://www.cnblogs.com/BlueTzar/articles/811160.html)(严肃的TCP/IP讲解)  
+* [HTTP协议—— 简单认识TCP/IP协议](http://www.cnblogs.com/roverliang/p/5176456.html)(配图，生动形象，逗比，易懂)  
+* [对 TCP/IP 网络协议的深入浅出总结](http://blog.jobbole.com/74795/)(HTTP，TCP/IP，SOAP，SOCKET总结的大成，socket总结不足)  
+* [关于RPC协议的通俗理解](http://blog.csdn.net/huangjin0507/article/details/52199349)(总结了知乎同问题下精彩的回答，通俗易懂)  
+* [HTTP、TCP、UDP、Socket、servlet区别与联系](http://blog.csdn.net/wabiaozia/article/details/54571874)(说实话，这篇文章并没有什么亮点，而且并没有题目说的那样讲述区别和联系，都是介绍大概的概念完事了，收藏下来只是因为在讲Servlet的部分吸引了我)  
+* [RPC框架几行代码就够了](http://javatar.iteye.com/blog/1123915)(dubbo框架作者，不需要多说)  
+* [Java Socket编程](http://www.cnblogs.com/wnlja/p/4366402.html)(网络编程，基本上就是socket编程，而socket编程，这一篇就够了)
 
 ## JAVA
 
