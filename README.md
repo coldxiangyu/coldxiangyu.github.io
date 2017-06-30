@@ -3,4 +3,4 @@
 just build a place to write something
 
 
-冷湘宇原博客：https://www.zybuluo.com/mdeditor#800595
+冷湘宇原博客：[作业部落](https://www.zybuluo.com/mdeditor#800595)
