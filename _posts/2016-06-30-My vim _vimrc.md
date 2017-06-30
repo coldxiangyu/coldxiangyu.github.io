@@ -8,6 +8,10 @@ mathjax: true
 ---
 
 个人`vim`配置，持续更新。
+
+
+
+
 ```
 source $VIMRUNTIME/vimrc_example.vim
 " An example for a vimrc file.
