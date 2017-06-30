@@ -15,6 +15,9 @@ mathjax: true
 1）既然是在MyEclipse中整合Git那首先需要安装MyEclipse，安装步骤略去不表，木有什么可值得记录的，一路next基本上就可以搞定。（文中是以MyEclipse8.5为例）  
 2）Egit插件，可以在官网上下载最新版本，网址为：http://www.eclipse.org/egit/download/ 。Egit是一款Eclipse上的Git插件。  
 3）下载Git环境，可以在Git官网上下载最新版本，网址为：http://help.github.com/win-set-up- git/。（文中以Git-1.8.1.2-preview20130201为例）。  
+
+
+
 4）在https://github.com/ 上用自己的邮箱申请一个帐号，不再详述。
           
 ### 二、环境搭建
