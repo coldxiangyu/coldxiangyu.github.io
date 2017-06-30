@@ -10,7 +10,11 @@ mathjax: true
 首先安装git，windows版本下载地址：http://msysgit.github.io/  
 安装过程不再详述。  
 界面如下，类似shell工具：  
-![image_1bh2a7a1p1krm15kt9ghalun0sm.png-9.4kB][1]    
+![image_1bh2a7a1p1krm15kt9ghalun0sm.png-9.4kB][1]   
+
+
+
+
 在windows机器上安装完gitbash之后，如何与github进行连接呢？  
 1.创建身份标识（用户名、邮箱）
 ```
