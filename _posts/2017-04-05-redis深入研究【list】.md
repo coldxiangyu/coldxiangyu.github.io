@@ -12,6 +12,10 @@ redis命令参考手册：http://doc.redisfans.com/
 查看redis命令手册可以看到，redis关于List提供以下方法：  
 `BLPOP、BRPOP、BRPOPLPUSH、LINDEX、LINSERT、LLEN、LPOP、LPUSH、LPUSHX、`
 `LRANGE、LREM、LSET、LTRIM、RPOP、RPOPLPUSH、RPUSH、RPUSHX`等。  
+
+
+
+
 其中作为队列使用，常用的无非就是`LPUSH、LPOP、RPUSH、RPOP`，单从命名大概可以看出，这个list作为队列可以左PUSH、POP，也可以右PUSH、POP，以下为本地redis客户端测试：
 ```
 127.0.0.1:6379> lpush nums 1 2 3 4 5 6
