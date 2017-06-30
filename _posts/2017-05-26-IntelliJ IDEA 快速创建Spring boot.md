@@ -10,6 +10,10 @@ mathjax: true
 在我的[另一篇文章](https://www.zybuluo.com/coldxiangyu/note/770749)里，已经介绍过Spring boot，以及它的基本配置了。  
 那篇文章是在Myeclipse环境通过maven项目搭建起来的，虽然也很容易，但是还有更容易的。今天我要介绍的就是通过IDEA的Spring Initializr创建Spring boot工程。  
 接下来来看看到底有多容易。  
+
+
+
+
 在不用IntelliJ IDEA的情况下，我们通常需要访问http://start.spring.io/，生成maven包，然后解压导入到我们的IDE。
 ![image_1bhu45e0gqkc125014gfi3m13n39.png-47.6kB][1]  
 而IntelliJ IDEA与Spring结合的非常好，Spring Initializr已经内置，我们直接在IDEA进行创建即可。
