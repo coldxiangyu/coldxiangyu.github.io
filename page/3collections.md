@@ -26,7 +26,7 @@ type: page
 
 ## JAVA
 
-[JAVA中分为基本数据类型及引用数据类型](http://www.cnblogs.com/dubo-/p/5565677.html)(将java的数据类型讲解的很清楚，从计算机存储方式以及内存方面都有说明，不过在String同值判断的时候存在错误，忽略了java享元模式，需要特别注意)  
+[JAVA中分为基本数据类型及引用数据类型](http://www.cnblogs.com/dubo-/p/5565677.html)(将java的数据类型讲解的很清楚，从计算机存储方式以及内存方面都有说明，不过在String同值判断的时候存在错误，忽略了java享元模式，需要特别注意)    
 [GBK,UTF-8,和ISO8859-1之间的编码与解码](http://blog.csdn.net/xiongchao2011/article/details/7276834)(详细讲述了几种编码之间的区别，按历史发展顺序，并以java为例详细说明了关于编码设置与转换)  
 [java代理机制](http://www.cnblogs.com/machine/archive/2013/02/21/2921345.html)(java几种代理模式以及实现方式讲解的很清楚)  
 [关于.getClass()和.class的区别](http://blog.csdn.net/qianzhiyong111/article/details/7320879)(反射机制)  
@@ -59,7 +59,9 @@ type: page
 [github 怎么搭建博客？](https://www.zhihu.com/question/23934523)(知乎)  
 [傻瓜都可以利用github pages建博客](http://cyzus.github.io/2015/06/21/github-build-blog/)(github)  
 [一步步在GitHub上创建博客主页](http://www.pchou.info/ssgithubPage/2013-01-03-build-github-blog-page-01.html)(完整的教程)  
-[有哪些简洁明快的 Jekyll 模板？](https://www.zhihu.com/question/20223939)(如题)
+[有哪些简洁明快的 Jekyll 模板？](https://www.zhihu.com/question/20223939)(如题)  
+[搭建一个免费的，无限流量的Blog----github Pages和Jekyll入门](http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html)(阮一峰) 
+[github + jekyll工作机制](http://www.360doc.com/content/14/0415/07/13232598_369075184.shtml)(jekyll工作机制讲解很透彻)
 
 ## git相关
 
