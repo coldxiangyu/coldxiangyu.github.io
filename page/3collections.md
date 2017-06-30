@@ -111,7 +111,8 @@ type: page
     
 * [Redis实现类似SQL的where多条件查询](http://blog.csdn.net/zbw18297786698/article/details/52904316)
 
-    hash类型的条件查询，也不是严格意义的where
+    hash类型的条件查询，也不是严格意义的where
+    
 
 ## 解决工作中问题
 
@@ -139,13 +140,15 @@ type: page
     
 * [一步步在GitHub上创建博客主页](http://www.pchou.info/ssgithubPage/2013-01-03-build-github-blog-page-01.html)
 
-    非常完整的教程
+    非常完整的教程
     
 * [有哪些简洁明快的 Jekyll 模板？](https://www.zhihu.com/question/20223939)
 
+    
+
 * [搭建一个免费的，无限流量的Blog----github Pages和Jekyll入门](http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html)
     
-    阮一峰的博客 
+    阮一峰的博客 
 
 * [github + jekyll工作机制](http://www.360doc.com/content/14/0415/07/13232598_369075184.shtml)
     
