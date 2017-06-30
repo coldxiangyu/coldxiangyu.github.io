@@ -62,7 +62,6 @@ type: page
 [有哪些简洁明快的 Jekyll 模板？](https://www.zhihu.com/question/20223939)(如题)  
 [搭建一个免费的，无限流量的Blog----github Pages和Jekyll入门](http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html)(阮一峰) 
 
-
 [github + jekyll工作机制](http://www.360doc.com/content/14/0415/07/13232598_369075184.shtml)(jekyll工作机制讲解很透彻)
 
 ## git相关
