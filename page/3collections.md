@@ -11,7 +11,8 @@ type: page
 
 ## 架构设计
 
-* [一些设计上的基本常识](http://javatar.iteye.com/blog/706098)(注意在框架设计过程中，将API/SPI进行区分)
+* [一些设计上的基本常识](http://javatar.iteye.com/blog/706098)
+    注意在框架设计过程中，将API/SPI进行区分
 
 ## 网络编程
 
