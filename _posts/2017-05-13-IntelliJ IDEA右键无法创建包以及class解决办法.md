@@ -7,9 +7,13 @@ tags: IDEA
 mathjax: true
 ---
 
-在使用IDEA的过程中，由IDEA转移Myeclipse的代沟一直存在。
-在新建maven项目中，想创建包以及class的时候，发现右键没有相关的创建项。如图：
+在使用IDEA的过程中，由eclipse转IDEA总会遇到一些不适应。
+比如在新建maven项目中，想创建包以及class的时候，发现右键没有相关的创建项。如图：
 ![image_1bhtjjils1md710gbp89t51ilh9.png-74.7kB][1]
+
+
+
+
 因为IDEA并不认同该目录为source目录。
 解决办法如下：
 ![image_1bhtjlrqu1v67s1sbe013ee15c7m.png-59.3kB][2]
