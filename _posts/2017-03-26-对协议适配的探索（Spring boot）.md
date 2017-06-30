@@ -13,6 +13,10 @@ mathjax: true
 当然，首先要搭建一个工程试验一下才行。  
 试验的话，肯定不能在搭建项目上花费太多时间，spring boot是不二之选。  
 源码已上传github：https://github.com/coldxiangyu/protocoladapter  
+
+
+
+
 我们要研究多协议，所以肯定要加入webservice，webservice采用cxf发布。  
 我们除了引入spring boot的包还要引入cxf的包：
 ```xml
