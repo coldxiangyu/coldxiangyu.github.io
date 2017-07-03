@@ -255,7 +255,8 @@ type: page
 * [egg的博客](http://blog.csdn.net/zhangerqing/article/list/1)  
 * [舞动的心](http://www.cnblogs.com/liuzhen1995/)  
 * [王鸿飞的专栏](http://blog.csdn.net/neosmith)  
-* [Defonds 的专栏](http://blog.csdn.net/defonds)
+* [Defonds 的专栏](http://blog.csdn.net/defonds)  
+* [Hux blog](http://huangxuan.me/)
 
     
 ## 其它
