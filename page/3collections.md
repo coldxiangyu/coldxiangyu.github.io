@@ -250,7 +250,6 @@ type: page
 
 ## 优秀的博客
 
-* [egg的博客](http://blog.csdn.net/zhangerqing/article/list/1)  
 * [hawstein的博客](http://www.hawstein.com/)  
 * [程序猿DD的博客](http://blog.didispace.com/)  
 * [egg的博客](http://blog.csdn.net/zhangerqing/article/list/1)  
