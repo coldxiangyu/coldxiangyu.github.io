@@ -256,7 +256,8 @@ type: page
 * [舞动的心](http://www.cnblogs.com/liuzhen1995/)  
 * [王鸿飞的专栏](http://blog.csdn.net/neosmith)  
 * [Defonds 的专栏](http://blog.csdn.net/defonds)  
-* [Hux blog](http://huangxuan.me/)
+* [Hux blog](http://huangxuan.me/)  
+* [cutesource的博客](http://blog.csdn.net/cutesource)
 
     
 ## 其它
