@@ -64,6 +64,12 @@ type: page
 * [Java Socket编程](http://www.cnblogs.com/wnlja/p/4366402.html)
 
     网络编程，基本上就是socket编程，而socket编程，这一篇就够了
+    
+* [Axis源码分析-客户端调用（一）](http://dead-knight.iteye.com/blog/731024)  
+* [Axis源码分析-Web服务部署（二）](http://dead-knight.iteye.com/blog/732961)  
+* [Axis源码分析-服务端处理请求并响应（三）](http://dead-knight.iteye.com/blog/738655)  
+
+    Axis源码系列，在研究webservice如何封装socket为http的时候看到的，讲的虽然不是很细致，大多是贴源码，但是足够了，毕竟网上没有几篇关于axis和cxf源码分析的文章。这个博客还有很多其它框架的源码分析，还没来得及拜读。
 
 ## JAVA
 
@@ -257,7 +263,8 @@ type: page
 * [王鸿飞的专栏](http://blog.csdn.net/neosmith)  
 * [Defonds 的专栏](http://blog.csdn.net/defonds)  
 * [Hux blog](http://huangxuan.me/)  
-* [cutesource的博客](http://blog.csdn.net/cutesource)
+* [cutesource的博客](http://blog.csdn.net/cutesource)  
+* [Dead_knight的博客](http://dead-knight.iteye.com/)
 
     
 ## 其它
