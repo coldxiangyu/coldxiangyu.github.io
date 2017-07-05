@@ -69,7 +69,7 @@ type: page
 * [Axis源码分析-Web服务部署（二）](http://dead-knight.iteye.com/blog/732961)  
 * [Axis源码分析-服务端处理请求并响应（三）](http://dead-knight.iteye.com/blog/738655)  
 
-    Axis源码系列，在研究webservice如何封装socket为http的时候看到的，讲的虽然不是很细致，大多是贴源码，但是足够了，毕竟网上没有几篇关于axis和cxf源码分析的文章。这个博客还有很多其它框架的源码分析，还没来得及拜读。
+    Axis源码系列，在研究webservice如何封装socket为http的时候看到的，讲的虽然不是很细致，大多是贴源码，但是足够了，毕竟网上没有几篇关于axis和cxf源码分析的文章。这个博客还有很多其它框架的源码分析，还没来得及拜读。
 
 ## JAVA
 
