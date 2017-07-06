@@ -63,8 +63,12 @@ type: page
     
 * [Java Socket编程](http://www.cnblogs.com/wnlja/p/4366402.html)
 
-    网络编程，基本上就是socket编程，而socket编程，这一篇就够了
+    网络编程，基本上就是socket编程，而socket编程，这一篇就够了  
     
+* [Netty系列之Netty高性能之道](http://www.infoq.com/cn/articles/netty-high-performance)  
+
+    InfoQ的文章，永远的技术干货。  
+    
 * [Axis源码分析-客户端调用（一）](http://dead-knight.iteye.com/blog/731024)  
 * [Axis源码分析-Web服务部署（二）](http://dead-knight.iteye.com/blog/732961)  
 * [Axis源码分析-服务端处理请求并响应（三）](http://dead-knight.iteye.com/blog/738655)  
