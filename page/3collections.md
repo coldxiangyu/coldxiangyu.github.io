@@ -68,6 +68,10 @@ type: page
 * [Netty系列之Netty高性能之道](http://www.infoq.com/cn/articles/netty-high-performance)  
 
     InfoQ的文章，永远的技术干货。  
+    
+* [攻破JAVA NIO技术壁垒](http://www.importnew.com/19816.html)  
+
+    对java NIO做了详细解释，部分原理，但并未从源码角度进行分析
     
 * [Axis源码分析-客户端调用（一）](http://dead-knight.iteye.com/blog/731024)  
 * [Axis源码分析-Web服务部署（二）](http://dead-knight.iteye.com/blog/732961)  
