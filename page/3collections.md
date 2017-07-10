@@ -71,7 +71,12 @@ type: page
     
 * [攻破JAVA NIO技术壁垒](http://www.importnew.com/19816.html)  
 
-    对java NIO做了详细解释，部分原理，但并未从源码角度进行分析
+    对java NIO做了详细解释，部分原理，但并未从源码角度进行分析  
+    
+* [NIO入门](https://www.ibm.com/developerworks/cn/education/java/j-nio/j-nio.html)  
+* [JAVA NIO浅析](https://zhuanlan.zhihu.com/p/23488863)  
+
+    一个是IBM专栏，一个是知乎专栏，初学NIO可以对比着看一下，讲解的很详细
     
 * [Axis源码分析-客户端调用（一）](http://dead-knight.iteye.com/blog/731024)  
 * [Axis源码分析-Web服务部署（二）](http://dead-knight.iteye.com/blog/732961)  
