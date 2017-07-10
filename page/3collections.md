@@ -73,8 +73,8 @@ type: page
 
     对java NIO做了详细解释，部分原理，但并未从源码角度进行分析  
     
-* [NIO入门](https://www.ibm.com/developerworks/cn/education/java/j-nio/j-nio.html)  
-* [JAVA NIO浅析](https://zhuanlan.zhihu.com/p/23488863)  
+* [NIO入门](https://www.ibm.com/developerworks/cn/education/java/j-nio/j-nio.html)(IBM专栏)  
+* [JAVA NIO浅析](https://zhuanlan.zhihu.com/p/23488863)(知乎专栏)  
 
     一个是IBM专栏，一个是知乎专栏，初学NIO可以对比着看一下，讲解的很详细  
     
