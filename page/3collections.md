@@ -77,6 +77,10 @@ type: page
 * [JAVA NIO浅析](https://zhuanlan.zhihu.com/p/23488863)(知乎专栏)  
 
     一个是IBM专栏，一个是知乎专栏，初学NIO可以对比着看一下，讲解的很详细  
+    
+* [使用SocketChannel的NIO客户机服务器通信示例](http://www.cnblogs.com/likwo/archive/2010/06/29/1767814.html)  
+
+    一个比较完整的NIO示例  
     
 * [Axis源码分析-客户端调用（一）](http://dead-knight.iteye.com/blog/731024)  
 * [Axis源码分析-Web服务部署（二）](http://dead-knight.iteye.com/blog/732961)  
