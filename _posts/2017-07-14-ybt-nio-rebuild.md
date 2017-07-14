@@ -42,7 +42,7 @@ import org.apache.log4j.Logger;
 import org.jdom.Element;
   
 public class ServerHandle implements Runnable{  
-	private int ttPort = -1;
+    private int ttPort = -1;
     private Selector selector;  
     private ServerSocketChannel serverChannel;  
     private volatile boolean started;
