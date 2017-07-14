@@ -346,12 +346,15 @@ OK，到这里我们启动服务端进行测试：
 ![image_1bl03vie41k2j1abbhq93381m2c9.png-51.5kB][1]
 
 对应的服务端日志打印如下：  
+
 ![image_1bl0441n3pfpsti1h7o14j4t97m.png-50.5kB][2]
 
 我们再通过socketTool工具对多个端口进行测试：  
+
 ![image_1bl04dlhiu4vm9cugn1m396p213.png-33kB][3]
 
 服务端日志打印：  
+
 ![image_1bl04epjg1nso1seh14dv74phum1t.png-30.8kB][4]
 
 可以看到，NIO非阻塞监听多个端口信息传输已经实现。  
