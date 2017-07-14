@@ -3,7 +3,7 @@ layout: post
 title:  "从头学算法（三、LeetCode之 Two Sum）"
 date:   2016-06-25 10:13:22
 categories: 数据结构及算法
-tags: algorithm
+tags: algorithms
 mathjax: true
 ---
 
