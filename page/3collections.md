@@ -19,7 +19,7 @@ type: page
 
     知乎经典问题，涉及到知乎众神的回答  
     
-* [JAVA设计模式]第一部分：接口、抽象类、设计原则](http://www.cnblogs.com/jiangzhengjun/p/4260969.html)  
+* [[JAVA设计模式]第一部分：接口、抽象类、设计原则](http://www.cnblogs.com/jiangzhengjun/p/4260969.html)  
 
     设计原则详尽介绍  
     
