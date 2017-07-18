@@ -45,8 +45,8 @@ type: page
     
 * [Java设计模式——六大原则](http://automaticthoughts.iteye.com/blog/1563816)  
 
-    这个对六大原则都有代码级的介绍，比较详细  
-    
+    这个对六大原则都有代码级的介绍，比较详细
+
 * [如何建设高可用系统](http://ifeve.com/%e5%a6%82%e4%bd%95%e5%bb%ba%e8%ae%be%e9%ab%98%e5%8f%af%e7%94%a8%e7%b3%bb%e7%bb%9f/#more-31382)  
 
     基本上能想到的都已经列出来了，在以后的高并发架构设计过程中，还是要回顾一下这些是否已经考虑
