@@ -13,9 +13,41 @@ type: page
 
 * [一些设计上的基本常识](http://javatar.iteye.com/blog/706098)
     
-    注意在框架设计过程中，将API/SPI进行区分
+    注意在框架设计过程中，将API/SPI进行区分  
     
-* [如何建设高可用系统](http://ifeve.com/%e5%a6%82%e4%bd%95%e5%bb%ba%e8%ae%be%e9%ab%98%e5%8f%af%e7%94%a8%e7%b3%bb%e7%bb%9f/#more-31382)
+* [Java中使用了设计模式思想的类有哪些？](https://www.zhihu.com/question/26710849)  
+
+    知乎经典问题，涉及到知乎众神的回答  
+    
+* [JAVA设计模式]第一部分：接口、抽象类、设计原则](http://www.cnblogs.com/jiangzhengjun/p/4260969.html)  
+
+    设计原则详尽介绍  
+    
+* [如何设计优雅的类结构](http://www.jianshu.com/p/ccaebebbb4ee)  
+
+    clean code阅读笔记  
+    
+* [Java面对对象类设计随笔](http://303178394.iteye.com/blog/1929546)  
+
+    通俗生动易懂  
+    
+* [Java程序员应该了解的10个面向对象设计原则](http://www.csdn.net/article/1970-01-01/313089)  
+
+    简单，只是大体介绍，并未详述  
+    
+* [使用javadoc规范java开发文档](http://blog.csdn.net/heavenying/article/details/1632348)  
+
+    优雅的使用javadoc规范注释自己的代码  
+    
+* [15个关于架构的精品资源](http://download.csdn.net/album/detail/3822)  
+
+    提供精品架构下载  
+    
+* [Java设计模式——六大原则](http://automaticthoughts.iteye.com/blog/1563816)  
+
+    这个对六大原则都有代码级的介绍，比较详细  
+    
+* [如何建设高可用系统](http://ifeve.com/%e5%a6%82%e4%bd%95%e5%bb%ba%e8%ae%be%e9%ab%98%e5%8f%af%e7%94%a8%e7%b3%bb%e7%bb%9f/#more-31382)  
 
     基本上能想到的都已经列出来了，在以后的高并发架构设计过程中，还是要回顾一下这些是否已经考虑
     
