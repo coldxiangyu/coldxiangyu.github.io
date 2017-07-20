@@ -15,17 +15,24 @@ mathjax: true
 ## 背景
 
 许多公司是对上网权限是进行限制的。  
+
 公司对内部员工分配上网账号，员工通过浏览器登陆验证身份才得以联网。  
+
 这样既保证了自身网络的安全性，也实现了对员工上网行为的规范，算是一举两得。  
+
 这也就使得我每天打卡上班开机之后第一件事就是先登陆上网账号进行联网，麻烦的很，我是受不了这种的。所以，何不实现一个开机自动登陆上网账号的脚本呢。而且想来也十分简单，只是模拟一个http post请求而已，再写一个bat脚本文件设置开机启动即可。  
+
 首先我们要来看一下上网登陆界面：  
 
 
 
 
 ![image_1blfc2s7r10h71k8799tbh6gkjm.png-21.3kB][1]  
+
 我们只需要查看源码获取用户名和密码的域ID，作为post请求参数即可。  
-![image_1blfcbtv61vrb17197j197tg0nm.png-11.6kB][2]
+
+![image_1blfcbtv61vrb17197j197tg0nm.png-11.6kB][2]  
+
 由此我们获取到了用户名：username，密码：passwd  
 接下来就是通过java自己的http或者HttpClient实现post请求了，这里我采用了java自带的http，不需要引入额外jar包，比较基础，也比较方便。  
 
@@ -137,6 +144,7 @@ ping /n 5 127.0.0.1 >nul
 
 ```
 bat的编写也十分简单，设置class目录以及本地运行的jdk环境，通过`java`命令启动程序即可。  
+
 bat最后一行`ping /n 5 127.0.0.1 >nul`是用来控制bat运行窗口停留时长的，我设置的5s，是为了方便观察登陆结果，如果不想看的话，将其注掉即可。  
 
 接下来就是把此bat文件设置为windows开机启动项了，我用最简单的办法，直接将此bat文件扔进用户启动目录就可以了。我的用户启动目录为：`C:\Users\coldxiangyu\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup`  
