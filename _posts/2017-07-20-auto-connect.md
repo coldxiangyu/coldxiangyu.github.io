@@ -115,6 +115,12 @@ public class LoginAB {
 ```
 由于此时我的账号是已经登录的，因此虽然认证失败，但是我们的请求是成功的。  
 
+注销账号，重新执行程序，查看结果：  
+
+```
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title></title></head><script>var type="authok"var title="认证成功！"var auth="1"var tips="认证成功<br>用户名：USER_NAME<br>IP地址：...."var url=""var day_assign="无限制"var month_assign="无限制"var day="0M"var month="0M"var enable="启用"var BindType="不绑定"var MultiUse="非公用帐号"var Authway="密码认证"var AuthFlag="LDAP认证"var Expire="2017-9-1"</script><frameset border=0 cols="0,*" frameborder=0 framespacing=0><frame src="" noresize> <frame src="/authresult/authresult.htm" frameborder=0 noresize scrolling=auto></frameset></html>
+```
+
 接下来就是bat文件的编写了，bat无非就是执行我们刚刚编译好的class文件。如下：  
 ``` dos
 @echo off
