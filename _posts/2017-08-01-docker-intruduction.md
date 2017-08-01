@@ -178,7 +178,7 @@ runoob@runoob:~# docker run -d -P training/webapp python app.py
 当我们启动的容器比较多，这时候通过`docker ps`命令列出的容器很多，不方便我们查看，我们仅仅需要列出最后一次创建的容器，这时候我们使用`docker ps -l`即可。  
 ![2017-08-01 09:56:16屏幕截图.png-19kB][12]  
 ### 其它命令
-我们在Linux上经常通过`top`命令来查看系统信息，包括进程以及CUP以及内存占用等等，Docker也有一个类似的命令，我们可以通过`docker top`来查看容器进程：  
+我们在Linux上经常通过`top`命令来查看系统信息，包括进程以及CPU以及内存占用等等，Docker也有一个类似的命令，我们可以通过`docker top`来查看容器进程：  
 ![2017-08-01 09:58:00屏幕截图.png-31.6kB][13]  
 此外，我们可以通过`docker start [CONTAINER]`来启动被`docker stop`的容器。也可以通过`docker restart`来重启仍在运行的容器。如果要删除一个容器的话，通过`docker rm [CONTAINER]`即可实现。  
 
