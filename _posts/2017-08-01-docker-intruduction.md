@@ -335,7 +335,8 @@ root@coldxiangyu-virtual-machine:/home/coldxiangyu#
 到这里，Docker的基本应用就介绍到这里，剩下的就由大家自己去摸索了。  
 
 最后首尾呼应一下，Docker为什么这么火，你也许已经有了自己的理解。  
-
+  
+  
 >版权声明：本文为原创内容，转载请注明出处，谢谢合作。
 
   [1]: http://static.zybuluo.com/coldxiangyu/k2x6gypqt6qa9410olo099ke/image_1bm1lc3r211gh1bj51u5l1khda1f9.png
