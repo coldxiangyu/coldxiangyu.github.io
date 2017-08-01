@@ -336,6 +336,7 @@ root@coldxiangyu-virtual-machine:/home/coldxiangyu#
 
 最后首尾呼应一下，Docker为什么这么火，你也许已经有了自己的理解。  
 
+>版权声明：本文为原创内容，转载请注明出处，谢谢合作。
 
   [1]: http://static.zybuluo.com/coldxiangyu/k2x6gypqt6qa9410olo099ke/image_1bm1lc3r211gh1bj51u5l1khda1f9.png
   [2]: http://static.zybuluo.com/coldxiangyu/ap2ddd4k8p8obqx4f3y8yd8q/image_1bmbt0oh916pc1hln1ndv1vpa18rr9.png
