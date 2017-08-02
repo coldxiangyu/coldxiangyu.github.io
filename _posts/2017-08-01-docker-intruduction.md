@@ -124,9 +124,9 @@ start: Job is already running: docker
 root@coldxiangyu-virtual-machine:~# docker run ubuntu:15.10 /bin/echo "Hello world"
 Hello world
 
-```
-### 容器交互
+```  
 其中ubuntu:15.10指定要运行的镜像，Docker首先从本地主机上查找镜像是否存在，如果不存在，Docker 就会从镜像仓库 Docker Hub 下载公共镜像。  
+### 容器交互
 
 那么，我们如何进入容器内部进行操作呢？  
 
