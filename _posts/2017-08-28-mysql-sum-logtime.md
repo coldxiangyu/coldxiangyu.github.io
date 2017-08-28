@@ -68,7 +68,7 @@ where
 ```
 
 我们如何验证这条sql的准确性呢？
-我单独update了8条数据，userid为1129938，其余仍为1129939不变，通过这几条数据来验证sql结果是否正确。
+我单独update了8条数据，userid为1129938，其余仍为1129939不变，通过这几条数据来验证sql结果是否正确。  
 数据如下：
 `select * from qw_ht_tbl_player_login where userid = '1129938' order by id`  
 ![image_1bojbnrcn13go1kfald315u9132q13.png-22.4kB][3]  
