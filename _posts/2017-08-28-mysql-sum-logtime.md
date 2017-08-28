@@ -29,8 +29,13 @@ CREATE TABLE IF NOT EXISTS `qw_ht_tbl_player_login` (
   KEY `time_key` (`log_time`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=26573939 ;
 ```
+
+
+
+
 其中id自增，userid为登陆用户，type通过1,2区分登录、登出，log_time为对应时间。
 部分数据如下：  
+
 ![image_1boja9d801s3a1hmtqc81fp618qr9.png-26.7kB][1]  
 首先我觉得这个表设计的不是很合理，不如一条数据一个start_time一个end_time来的方便，不过倒也蛮清晰。  
 
@@ -63,7 +68,8 @@ where
 ```
 
 我们如何验证这条sql的准确性呢？
-我单独update了8条数据，userid为1129938，其余仍为1129939不变，通过这几条数据来验证sql结果是否正确。数据如下：
+我单独update了8条数据，userid为1129938，其余仍为1129939不变，通过这几条数据来验证sql结果是否正确。
+数据如下：
 `select * from qw_ht_tbl_player_login where userid = '1129938' order by id`  
 ![image_1bojbnrcn13go1kfald315u9132q13.png-22.4kB][3]  
 可以看到，一共有四次登录登出，也就是四个时间差值，分别为10s,5min41s,4min10s,2min51s,求和为772s。
@@ -94,6 +100,8 @@ where
     t1.log_time < t2.log_time and
     t2.id=(select min(id) from qw_ht_tbl_player_login where userid='1129938' and type=2 and id>t1.id)
 ```
+<br/><br/>
+>版权声明：本文为原创内容，转载请注明出处，谢谢合作。
 
   [1]: http://static.zybuluo.com/coldxiangyu/rbmo47wc6syuz0ftwg85nuwm/image_1boja9d801s3a1hmtqc81fp618qr9.png
   [2]: http://static.zybuluo.com/coldxiangyu/z0tjh9wfrus6ljo0ylvf6ol5/image_1bojaqrbr1glb1sch1ri91oi0frsm.png
