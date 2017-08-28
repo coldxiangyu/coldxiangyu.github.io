@@ -69,8 +69,7 @@ where
 
 我们如何验证这条sql的准确性呢？
 我单独update了8条数据，userid为1129938，其余仍为1129939不变，通过这几条数据来验证sql结果是否正确。  
-数据如下：
-`select * from qw_ht_tbl_player_login where userid = '1129938' order by id`  
+执行`select * from qw_ht_tbl_player_login where userid = '1129938' order by id`，  数据如下：  
 ![image_1bojbnrcn13go1kfald315u9132q13.png-22.4kB][3]  
 可以看到，一共有四次登录登出，也就是四个时间差值，分别为10s,5min41s,4min10s,2min51s,求和为772s。
 将上面sql中的userid替换为1129938，执行结果如下：  
