@@ -89,7 +89,7 @@ Java代码中没有任何配置，和传统的Spring应用相比，多了两个�
 
 我们没有一行配置代码、也没有`web.xml`。基于Spring Boot的应用在大多数情况下都不需要我们去显式地声明各类配置，而是将最常用的默认配置作为约定，在不声明的情况下也能适应大多数的开发场景。
 
-###数据库操作
+### 数据库操作
 上面介绍了最简单的hello world例子，在真正的项目中还是远远不够的，我们还要访问数据库，正如我们通常配置的jdbc的config文件，username、url、password之类，还有整合mybatis等持久化工具，druid、c3p0数据源之类的。  
 在spring boot中，这些依然通过maven引入依赖即可：
 ```xml
@@ -156,7 +156,7 @@ server:
 ```
 通过`port`和`address`可以修改服务器监听的地址和端口，`sessionTimeout`配置session过期时间（再也不用修改`web.xml`了，因为它根本不存在）。同时如果在生产环境中使用内嵌Tomcat，当然希望能够配置它的日志、线程池等信息，这些现在都可以通过Spring Boot的属性文件配置，而不再需要再对生产环境中的Tomcat实例进行单独的配置管理了。
 
-### @EnableAutoCongiguration
+### @EnableAutoConfiguration
 ---
 从Spring 3.0开始，为了替代繁琐的XML配置，引入`了@Enable...`注解对`@Configuration`类进行修饰以达到和XML配置相同的效果。想必不少开发者已经使用过类似注解：
 `@EnableTransactionManagement`开启Spring事务管理，相当于XMl中的`<tx:*>`
