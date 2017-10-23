@@ -162,7 +162,7 @@ server:
 `@EnableTransactionManagement`开启Spring事务管理，相当于XMl中的`<tx:*>`
 `@EnableWebMvc`使用Spring MVC框架的一些默认配置
 `@EnableScheduling`会初始化一个Scheduler用于执行定时任务和异步任务
-Spring Boot提供的`@EnableAutoCongiguration`似乎功能更加强大，一旦加上，上述所有的配置似乎都被包含进来而无需开发者显式声明。它究竟是如何做到的呢，先看看它的定义：
+Spring Boot提供的`@EnableAutoConfiguration`似乎功能更加强大，一旦加上，上述所有的配置似乎都被包含进来而无需开发者显式声明。它究竟是如何做到的呢，先看看它的定义：
 ```java
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
